@@ -9,6 +9,8 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
+require('./connections');
+
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
