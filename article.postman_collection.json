@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "abdd6c48-2d95-40c6-8c7c-26a51d14dc34",
+		"name": "article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得全部貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://intense-eyrie-58838.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"intense-eyrie-58838",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODBhMWIwZGJlZGM2Mzk3ZWUzZjlkYyIsImlhdCI6MTY1MjU5NzE5OSwiZXhwIjoxNjUzMjAxOTk5fQ.nF5EiV6ri56pvExbbzaVdpBcOAbxkSZcx-51U8WJQSw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"新增貼文3\",\r\n    \"image\": \"https://picsum.photos/id/1003/1181/1772\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enigmatic-mountain-33774.herokuapp.com/post",
+					"protocol": "https",
+					"host": [
+						"enigmatic-mountain-33774",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"teat3\",\r\n    \"email\":\"test3@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enigmatic-mountain-33774.herokuapp.com/sign_up",
+					"protocol": "https",
+					"host": [
+						"enigmatic-mountain-33774",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test3@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enigmatic-mountain-33774.herokuapp.com/sign_in",
+					"protocol": "https",
+					"host": [
+						"enigmatic-mountain-33774",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有使用者",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "取得目前使用者資料",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODBhMWIwZGJlZGM2Mzk3ZWUzZjlkYyIsImlhdCI6MTY1MjU5NzE5OSwiZXhwIjoxNjUzMjAxOTk5fQ.nF5EiV6ri56pvExbbzaVdpBcOAbxkSZcx-51U8WJQSw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://enigmatic-mountain-33774.herokuapp.com/user",
+					"protocol": "https",
+					"host": [
+						"enigmatic-mountain-33774",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯使用者",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODBhMWIwZGJlZGM2Mzk3ZWUzZjlkYyIsImlhdCI6MTY1MjU5NzE5OSwiZXhwIjoxNjUzMjAxOTk5fQ.nF5EiV6ri56pvExbbzaVdpBcOAbxkSZcx-51U8WJQSw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test33\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enigmatic-mountain-33774.herokuapp.com/user/:id/edit",
+					"protocol": "https",
+					"host": [
+						"enigmatic-mountain-33774",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						":id",
+						"edit"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6280a1b0dbedc6397ee3f9dc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯使用者密碼",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODA3MjQ4ZWJhNWI4ZmZlYzc5NzE2MCIsImlhdCI6MTY1MjU5NjYwMywiZXhwIjoxNjUzMjAxNDAzfQ.1QNe7n-kLWuV6DZRm_B-8z6_ZfxjhpQH6W8uiyvOSAY",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123456789\",\r\n    \"confirmPassword\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/user/:id/updatePassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						":id",
+						"updatePassword"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62807248eba5b8ffec797160"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
