@@ -15,8 +15,17 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, '密碼必填'],
+      select: false,
     },
-    photo: String,
+    photo: {
+      type: String,
+      default: 'https://imgur.com/cQrCic5',
+    },
+    gender: {
+      type: String,
+      default: 'male',
+      enum: ['male', 'female'],
+    },
   },
   { versionKey: false }
 );
